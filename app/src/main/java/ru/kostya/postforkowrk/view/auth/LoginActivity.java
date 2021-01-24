@@ -7,19 +7,17 @@ import androidx.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import ru.kostya.postforkowrk.MainActivity;
+import ru.kostya.postforkowrk.view.main.MainActivity;
 import ru.kostya.postforkowrk.R;
 import ru.kostya.postforkowrk.constans.Firebase;
 import ru.kostya.postforkowrk.models.User;
 import ru.kostya.postforkowrk.viewmodles.LoginViewModel;
-import ru.kostya.postforkowrk.viewmodles.RegisterViewModel;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -59,8 +57,9 @@ public class LoginActivity extends AppCompatActivity {
             String name = getIntent().getStringExtra(Firebase.NAME_USER);
             String email = getIntent().getStringExtra(Firebase.EMAIL_USER);
             String password = getIntent().getStringExtra(Firebase.PASSWORD_USER);
+            String imageUrl = getIntent().getStringExtra(Firebase.IMAGE_URL_USER);
 
-            currentUser = new User(name,email,password);
+            currentUser = new User(name,email,password,imageUrl);
         }
 
                 observer = new Observer<String>() {

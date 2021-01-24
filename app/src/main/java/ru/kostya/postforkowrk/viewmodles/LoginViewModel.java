@@ -50,7 +50,7 @@ public class LoginViewModel extends ViewModel {
         final DatabaseReference userRef = FirebaseDatabase.getInstance().getReference(Firebase.USER_REF);
         final String uId = repository.getUsers().getUid();
 
-
+        userRef.child(uId).setValue(user);
     }
 
 }

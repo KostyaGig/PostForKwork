@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PostForKowrk</string>
+    <string name="item_post_text">Лента</string>
+    <string name="item_profile_text">Профиль</string>
 </resources>
